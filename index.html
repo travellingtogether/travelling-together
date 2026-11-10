@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путешествуем вместе</title>
+    <style>
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; background-color: #f3edd9; color: #222; }
+        header { display: flex; justify-content: flex-end; padding: 20px 40px; gap: 20px; background-color: #f3edd9; }
+        header a { text-decoration: none; color: #444; font-size: 14px; font-weight: 500; }
+        header a:hover { color: #000; }
+        .container { max-width: 960px; margin: 0 auto; padding: 40px 20px; text-align: center; }
+        .logo { width: 160px; height: 160px; margin-bottom: 10px; }
+        h1 { font-size: 52px; font-weight: 700; margin: 20px 0; color: #2c2c2c; }
+        .intro-text { font-size: 16px; line-height: 1.6; color: #444; max-width: 600px; margin: 0 auto 30px; text-align: center; }
+        .btn-main { display: inline-block; background-color: #f05a24; color: white; padding: 14px 35px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 16px; }
+        
+        /* Галерея замков */
+        .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 50px 0; }
+        .gallery img { width: 100%; height: 320px; object-fit: cover; border-radius: 8px; }
+
+        /* Блок Где слушать и Соцсети */
+        .brown-section { background-color: #89523f; color: #f3edd9; text-align: left; padding: 50px 40px; border-radius: 12px; margin-bottom: 40px; }
+        .brown-section h2 { font-size: 32px; margin-top: 0; margin-bottom: 5px; }
+        .brown-section p { font-size: 14px; margin-top: 0; margin-bottom: 25px; opacity: 0.9; }
+        .list-item { display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid rgba(243,237,217,0.2); text-decoration: none; color: #f3edd9; font-size: 18px; font-weight: bold; align-items: center; }
+        .list-item span { font-weight: normal; font-size: 14px; opacity: 0.8; text-align: right; }
+        .list-item::after { content: "→"; margin-left: 10px; font-weight: normal; opacity: 0.5; }
+        .list-item:hover { opacity: 0.8; }
+
+        /* Об авторе */
+        .author-block { display: flex; gap: 40px; text-align: left; margin: 60px 0; align-items: center; }
+        .author-block img { width: 300px; height: 350px; object-fit: cover; border-radius: 8px; }
+        .author-info h3 { font-size: 32px; margin: 0 0 5px 0; }
+        .author-subtitle { color: #89523f; font-size: 14px; margin-bottom: 20px; }
+        .author-card { background-color: #89523f; color: #f3edd9; padding: 25px; border-radius: 12px; line-height: 1.6; }
+
+        /* Обратная связь */
+        .feedback-block { display: flex; gap: 40px; text-align: left; margin: 60px 0; }
+        .feedback-info { flex: 1; }
+        .feedback-info h2 { font-size: 36px; margin-top: 0; }
+        .feedback-form { flex: 1; background-color: #89523f; padding: 30px; border-radius: 12px; display: flex; flex-direction: column; gap: 15px; }
+        .feedback-form input, .feedback-form textarea { padding: 12px; border: none; border-radius: 6px; background-color: #dfcfc4; font-size: 15px; color: #222; }
+        .feedback-form button { background-color: transparent; border: none; color: #f3edd9; text-align: left; font-size: 16px; font-weight: bold; cursor: pointer; padding: 5px 0; }
+        
+        max-width: 768px { .gallery { grid-template-columns: repeat(2, 1fr); } .author-block, .feedback-block { flex-direction: column; } .author-block img { width: 100%; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#where-to-listen">Где слушать</a>
+        <a href="#about-author">Об авторе</a>
+        <a href="#contacts">Контакты</a>
+        <a href="#feedback">Обратная связь</a>
+    </header>
+
+    <div class="container">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>Путешествуем вместе</h1>
+        <p class="intro-text">
+            Подкаст о культурном наслеждении, архитектуре и знаковых
+
+
+Беларуси. В каждом выпуске мы рассказываем о дворцах, усадьбах, замках и исторических местах, раскрывая их уникальную историю, архитектурные особенности и судьбы людей, связанных с ними.
+        </p>
+        <a href="https://mave.stream/ppn?utm_so" class="btn-main" target="_blank">Слушать подкаст</a>
+
+        <!-- Галерея -->
+        <div class="gallery">
+            <img src="castle1.jpg">
+            <img src="castle2.jpg">
+            <img src="castle3.jpg">
+            <img src="castle4.jpg">
+        </div>
+
+        <!-- Где слушать -->
+        <div id="where-to-listen" class="brown-section">
+            <h2>Где слушать</h2>
+            <p>Выберите удобную платформу — подкаст доступен на всех сразу, новые серии появляются в день выхода.</p>
+            <a href="https://mave.stream/ppn?utm_so" class="list-item" target="_blank">Mave stream <span>Стриминговый сервис</span></a>
+            <a href="https://podcasts.apple.com/ru/podcast/%D0%BF%D1%83%D1%82%D0%B5%D1%88%D0%B5%D1%81%D1%82%D0%B2%D1%83%D0%B5%D0%BC-%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B5/id1894336315" class="list-item" target="_blank">Apple Podcasts <span>Каталог Apple</span></a>
+            <a href="https://music.yandex.ru/album/41696324?clckid=ca90d74f" class="list-item" target="_blank">Яндекс Музыка <span>Сайт и приложение</span></a>
+            <a href="https://zvuk.com/podcast/50027729?clckid=8895a904" class="list-item" target="_blank">Звук <span>Стриминг в России</span></a>
+            <a href="https://pocketcasts.com/podcast/%D0%BF%D1%83%D1%82%D0%B5%D1%88%D0%B5%D1%81%D1%82%D0%B2%D1%83%D0%B5%D0%BC-%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B5/a426eea0-1da0-013f-57cf-02366ae7f0f7?clckid=b0c2a3a7" class="list-item" target="_blank">Pocket Casts <span>iOS и Android</span></a>
+        </div>
+
+        <!-- Об авторе -->
+        <div id="about-author" class="author-block">
+            <img src="pavel.jpg" alt="Павел">
+            <div class="author-info">
+                <h3>Об авторе</h3>
+                <div class="author-subtitle">Автор и ведущий подкаста</div>
+                <div class="author-card">
+                    Привет! Я ведущий подкаста. Наш проект посвящен местам с богатым прошлым и глубокими корнями. Я собираю интересные культурные детали, исторические курьезы и мифы из Беларуси и других стран, чтобы превратить их в атмосферные аудиопутешествия. Устраивайтесь поудобнее, выбирайте эпизод и давайте открывать мир вместе!
+                </div>
+            </div>
+        </div>
+
+        <!-- Соцсети -->
+        <div id="contacts" class="brown-section" style="background-color: #e8e3d3; color: #222;">
+            <h2 style="color: #222;">Соцсети</h2>
+            <p style="color: #444;">Анонсы выпусков, кадры с маршрутов и голосования за темы.</p>
+            <a href="https://t.me/travelling26?clckid=8ea3b576" class="list-item" style="color: #222; border-bottom: 1px solid rgba(0,0,0,0.1);" target="_blank">Telegram</a>
+            <a href="https://vk.ru/travelling26" class="list-item" style="color: #222; border-bottom: 1px solid rgba(0,0,0,0.1);" target="_blank">ВКонтакте</a>
+            <a href="https://www.youtube.com/@Traveling.together26" class="list-item" style="color: #222; border-bottom: 1px solid rgba(0,0,0,0.1);" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/travelling26.26?igsh=OTU3cjFydmF3enVv&utm_source=qr&clckid=dae9c814" class="list-item" style="color: #222; border-bottom: 1px solid rgba(0,0,0,0.1);" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@travelling2660?_r=1&_t=ZS-99wdtvvWXBt&clckid=8854e083" class="list-item" style="color: #222; border-bottom: 1px solid rgba(0,0,0,0.1);" target="_blank">TikTok</a>
+        </div>
+
+        <!-- Обратная связь -->
+        <div id="feedback" class="feedback-block">
+            <div class="feedback-info">
+                <h2>Обратная связь</h2>
+                <p>Заполните форму — сообщение придет прямо на почту подкаста.</p>
+            </div>
+            <form class="feedback-form" action="https://formspree.io" method="POST">
+                <input type="text" name="name" placeholder="Имя" required>
+                <input type="email" name="email" placeholder="Ваш e-mail" required>
+                <textarea name="message" rows="4" placeholder="Расскажите о себе, вопросе или предложении" required></textarea>
+                <button type="submit">Отправить →</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html> достопримечательностях
+Custom Forms with No Server Code | Formspree | Formspree
+Custom Forms with No Server Code | Formspree | Formspree
+formspree.io
